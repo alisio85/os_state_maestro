@@ -1,0 +1,28 @@
+[package]
+name = "os_state_maestro"
+version = "0.1.0"
+edition = "2024"
+authors = ["AI Assistant (based on an idea by alisio85)"]
+license = "MIT"
+description = "Deterministic, no_std finite-state machinery and event orchestration for OS development, with zero dependencies."
+repository = "https://github.com/alisio85/os_state_maestro"
+readme = "README.md"
+keywords = ["os", "kernel", "state-machine", "no_std", "embedded"]
+categories = ["embedded", "no-std", "os"]
+
+[lib]
+name = "os_state_maestro"
+path = "src/lib.rs"
+crate-type = ["rlib"]
+
+[features]
+default = []
+std = []
+
+[package.metadata.docs.rs]
+features = ["std"]
+default-target = "x86_64-unknown-linux-gnu"
+rustdoc-args = ["--cfg", "docsrs"]
+
+[workspace]
+members = []
